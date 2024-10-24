@@ -1,0 +1,215 @@
+body {
+	height: 100%;
+	background-size: cover;
+	background-color: #273c75;
+	padding: 0.5rem;
+	font-family: 'Arial', Helvetica, sans-serif;
+}
+
+.App {
+	text-align: center;
+	background-color: #273c75;
+	padding: 1rem;
+}
+
+.App-logo {
+	height: 3rem;
+	pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+.App-Header {
+	width: 80%;
+	background: #40739e;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	color: white;
+	padding: 0.5rem;
+	font-size: 2.5rem;
+	text-align: center;
+	margin: 1rem auto 1rem auto;
+	outline: 2px solid white;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.App-fcc-logo {
+	margin-left: calc(10px + 2vmin);
+	height: 10vmin;
+	pointer-events: none;
+}
+
+.wrapper {
+	width: 400px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	margin: 0.5rem auto;
+}
+.grid-container {
+	max-width: 400px;
+	max-height: 450px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+		'a a a a a a'
+		'b b b c c c'
+		'd e f g h i'
+		'j j j j j j'
+		'k k k k k k'
+		'l l m m n n';
+	gap: 2px;
+	border-radius: 5px;
+	border: 2px solid white;
+	background-color: #40739e;
+	padding-right: 1rem;
+	color: white;
+}
+
+header {
+	grid-area: a;
+	color: white;
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-align: center;
+}
+.btn {
+	background-color: white;
+	text-align: center;
+	margin: auto;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #c7ecee;
+	color: #0984e3;
+}
+#break-label,
+#session-label {
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin: auto;
+	color: white;
+	text-align: center;
+}
+#break-label {
+	grid-area: b;
+}
+
+#session-label {
+	grid-area: c;
+}
+
+.break-display,
+.session-display {
+	min-width: 60px;
+	font-size: 1.5rem;
+	font-family: Courier New, Courier, 'monospace';
+	font-weight: 600;
+	margin: auto;
+	color: white;
+	text-align: center;
+	background-color: black;
+	padding: 0 1rem;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+
+#break-increment {
+	grid-area: d;
+}
+#break-length {
+	grid-area: e;
+}
+#break-decrement {
+	grid-area: f;
+}
+#session-increment {
+	grid-area: g;
+}
+#sesson-length {
+	grid-area: h;
+}
+#session-decrement {
+	grid-area: i;
+}
+#timer-label,
+#time-left {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: auto;
+	color: white;
+	text-align: center;
+	border: 1px solid white;
+}
+#timer-label {
+	grid-area: j;
+	background-color: #c7ecee;
+	color: rgb(51, 217, 132);
+	border-radius: 5px;
+	padding: 0 0.5rem;
+}
+#time-left {
+	grid-area: k;
+	background-color: rgb(51, 217, 132);
+	padding: 0 1.5rem;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+#start-stop {
+	grid-area: l;
+}
+
+#reset {
+	grid-area: n;
+}
+
+@media (max-width: 480px) {
+	.wrapper {
+		width: 85%;
+	}
+	.grid-container {
+		display: grid;
+		align-items: center;
+		justify-content: center;
+	}
+	header {
+		font-size: 1.5rem;
+	}
+	#break-label,
+	#session-label {
+		font-size: 1rem;
+		margin: auto;
+		color: white;
+		text-align: left;
+	}
+	#timer-label,
+	#time-left {
+		font-size: 1.2rem;
+		font-weight: bold;
+		margin: 0.5rem auto;
+	}
+	#timer-label {
+		color: rgb(69, 197, 232);
+	}
+	#time-left {
+		background-color: #c7ecee;
+		color: rgb(69, 197, 232);
+	}
+}
